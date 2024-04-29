@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earth Day</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body background="2.avif">
+  <div class="menu">
+    <ul>
+      <li><img src="happy-earth1.jpg"></li>
+      <li><a href="#benefits">Benefits</a></li>
+      <li><a href="#causes">Causes</a></li>
+      <li><a href="#Action">Action</a></li>
+      <li><a href="#contact">Contact</a></li>
+      
+    </ul>
+  </div>
+<div class="Earth">
+  <h1 ><u>Earth Day</u></h1>
+  <p>Earth Day is an annual event celebrated around the world to demonstrate support for environmental protection. It was first celebrated in 1970, and now includes events in more than 193 countries.</p>
+</div>
+
+  <div class="content">
+    <section id="benefits">
+  <u><a href="https://y20india.in/world-earth-day-2024/#google_vignette"><h2>Benefits of Earth Day</h2></a></u>
+  <ul>
+    <li>Raises awareness about environmental issues</li>
+    <p>Earth Day serves as a platform to educate people about pressing environmental challenges such as climate change, pollution, deforestation, and loss of biodiversity. By highlighting these issues, Earth Day helps people understand the impact of human activities on the planet and the urgent need for action.</p>
+    <li>Promotes sustainability and conservation</li>
+    <p> Earth Day promotes the concept of sustainability, which is the responsible use of natural resources to meet present needs without compromising the ability of future generations to meet their own needs. It encourages individuals, communities, businesses, and governments to adopt sustainable practices that reduce waste, conserve energy and water, and protect natural habitats.</p>
+    <li>Encourages people to take action to protect the planet</li>
+    <p> Earth Day inspires people to take action to protect the environment. This can include participating in clean-up events, planting trees, reducing waste, conserving energy, advocating for environmental policies, and supporting sustainable businesses. Earth Day motivates individuals to make small changes in their daily lives that collectively can have a significant positive impact on the planet.</p>
+  </ul>
+</section>
+<section id="causes">
+  <u><a href="https://www.treadright.org/5-reasons-earth-day-was-started/"><h2>Causes of Earth Day</h2></a></u>
+  <p>The causes of Earth Day refer to the underlying environmental issues that led to the establishment of Earth Day as a global environmental movement.</p>
+  <ul>
+    <li>Increasing pollution levels</li>
+    <p> Pollution, especially from industries, vehicles, and agricultural activities, releases harmful substances into the air, water, and soil. This pollution harms human health, ecosystems, and wildlife. Earth Day highlights the need to reduce pollution and adopt cleaner, more sustainable practices.</p>
+    <li>Deforestation and habitat destruction</li>
+    <p> Deforestation is the clearing of forests for agriculture, logging, urban development, and other purposes. It leads to habitat destruction, loss of biodiversity, soil erosion, and climate change. Earth Day raises awareness about the importance of forests and the need to protect them for the health of the planet.</p>
+    <li>Climate change and global warming</li>
+    <p>Climate change refers to long-term changes in temperature, precipitation, and other climate patterns, largely caused by human activities such as burning fossil fuels and deforestation. Global warming, a key aspect of climate change, refers to the increase in Earth's average surface temperature. Earth Day emphasizes the urgent need to address climate change through mitigation and adaptation strategies.</p>
+  </ul>
+</section>
+
+<section id="Action">
+  <div class="container">
+    <h1>Earth Day</h1>
+    <div id="countdown"></div>
+    <div id="quote">"The environment is where we all meet; where we all have a mutual interest; it is the one thing all of us share."</div>
+    <button id="cta-btn">Take Action Now</button>
+  </div>
+  <script>
+    // Set the date for Earth Day (April 25nd)
+    const earthDayDate = new Date('2024-04-25').getTime();
+    
+    // Update the countdown every second
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = earthDayDate - now;
+    
+      // Calculate days, hours, minutes, and seconds remaining
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+      // Display the countdown
+      document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    
+      // If the countdown is over, show a message
+      if (distance < 0) {
+        clearInterval(countdown);
+        document.getElementById('countdown').innerHTML = 'Earth Day is here!';
+      }
+    }, 1000);
+    
+    // Function to handle the button click
+    document.getElementById('cta-btn').addEventListener('click', () => {
+      alert('Let\'s take action to protect our planet!');
+    });
+    </script>
+</section></div>
+
+<script src="script.js"></script>
+</body>
+</html>
